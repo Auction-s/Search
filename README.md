@@ -37,3 +37,37 @@ If you get ModuleNotFoundError for transformers or spacy, install them with pip 
 If the summarizer model download is slow, you can swap to a smaller summarizer or test QA/NER first. The sshleifer/distilbart-cnn-6-6 you used is a good smaller model.
 
 Add sample text files under examples/ later to show demo inputs/outputs.
+
+Tech Stack
+
+Python 3.8+ – Programming language
+
+spaCy – For Named Entity Recognition (NER)
+
+Hugging Face Transformers – For summarization and question answering
+
+Pip / Virtualenv – For dependency management
+
+Console (CLI) – Simple interface for user interaction
+
+Lessons Learned
+
+Gained hands-on experience with spaCy and Hugging Face libraries.
+
+Learned how to build a text-processing pipeline (NER → Summarization → QA).
+
+Practiced structuring a console application instead of hardcoding text.
+
+Improved understanding of how to document and publish a project on GitHub.
+
+Future Improvements
+
+Add a GUI interface (e.g., Tkinter or Streamlit) for better usability.
+
+Expand to support multiple languages (not just English).
+
+Integrate with a search API (e.g., Google Custom Search or Wikipedia) for real-time text sources.
+
+Optimize summarization with faster models or on-device deployment.
+
+Containerize the project with Docker for easier setup.
