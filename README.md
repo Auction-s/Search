@@ -1,75 +1,74 @@
-  # NLP Text Processing Console Application
-  
-  A Python-based console application demonstrating practical Natural Language Processing (NLP) techniques including Named Entity Recognition (NER) and abstractive text summarization. Built as a prototype to explore the capabilities of the Hugging Face `transformers` library and spaCy's industrial-strength NER.
-  
-  ## 🚀 Features
-  
-  - **Named Entity Recognition:** Identifies and categorizes entities (e.g., persons, organizations, locations) in input text using spaCy's `en_core_web_md` model.
-  - **Text Summarization:** Generates concise summaries of long-form text documents using the [Hugging Face `facebook/bart-large-cnn`] model.
-  - **Interactive Console Interface:** Allows for easy input of text and selection of processing tasks.
-  
-  ## 🛠️ Tech Stack & Dependencies
-  
-  - **Core Language:** Python 3.8+
-  - **Libraries & Frameworks:**
-    - `spacy` (& `en_core_web_md`) for Named Entity Recognition
-    - `transformers` (Hugging Face) for text summarization
-    - `torch` (PyTorch) as the backend engine
-  
-  ## 📸 Demonstration
-  
-  > **Input Text:** (Example from a news article about a recent tech conference)
-  >
-  > **NER Output:**
-  > - **PERSONS:** [Satya Nadella]
-  > - **ORGANIZATIONS:** [Microsoft, OpenAI]
-  > - **LOCATIONS:** [San Francisco]
-  >
-  > **Summarization Output:**
-  > The original 500-word article was condensed into a 3-sentence summary that accurately captured the key announcement of...
-  
-  *(Pro Tip: Add a GIF screen recording of you using the app! This is incredibly effective.)_
-  
-  ## 📁 Installation & Usage
-  
-  1.  **Clone the repository:**
-      ```bash
-      git clone https://github.com/Auction-s/Search.git
-      cd Search
-      ```
-  2.  **Create a virtual environment and install dependencies:**
-      ```bash
-      python -m venv venv
-      source venv/bin/activate  # Linux/macOS
-      # venv\Scripts\activate  # Windows
-      pip install -r requirements.txt
-      python -m spacy download en_core_web_md
-      ```
-  3.  **Run the application:**
-      ```bash
-      python nlp_console.py
-      ```
-  
-  Lessons Learned
-  
-  Gained hands-on experience with spaCy and Hugging Face libraries.
-  
-  Learned how to build a text-processing pipeline (NER → Summarization → QA).
-  
-  Practiced structuring a console application instead of hardcoding text.
-  
-  Improved understanding of how to document and publish a project on GitHub.
-  
-  Future Improvements
-  
-  Add a GUI interface (e.g., Tkinter or Streamlit) for better usability.
-  
-  Expand to support multiple languages (not just English).
-  
-  Integrate with a search API (e.g., Google Custom Search or Wikipedia) for real-time text sources.
-  
-  Optimize summarization with faster models or on-device deployment.
-  
-  Containerize the project with Docker for easier setup.
-  
-      
+# NLP Text Processing Console Application
+
+A Python-based console application that demonstrates practical Natural Language Processing (NLP) techniques. This interactive tool allows users to input text and receive both Named Entity Recognition (NER) analysis and AI-generated summaries.
+
+## 🚀 Features
+
+- **Interactive Console Interface:** Simple text-based interface for easy text input and processing
+- **Named Entity Recognition:** Identifies and categorizes people, organizations, and locations in text using spaCy
+- **Text Summarization:** Generates concise summaries of input text using Hugging Face transformers
+- **Real-time Processing:** Immediate results for quick analysis and experimentation
+
+## 🛠️ Tech Stack
+
+- **Python 3.8+**
+- **spaCy** with `en_core_web_md` for entity recognition
+- **Hugging Face Transformers** with `facebook/bart-large-cnn` for summarization
+- **PyTorch** as the machine learning backend
+
+## 💡 How It Works
+
+1. Run the application: `python nlp_console.py`
+2. Enter your text when prompted
+3. View the processed results:
+   - Extracted entities (people, organizations, locations)
+   - AI-generated summary
+4. Repeat with new text or exit
+
+### Example Session:
+Enter your text: Satya Nadella, CEO of Microsoft, announced a new partnership with OpenAI during an event in San Francisco. The collaboration focuses on advancing AI research and development.
+
+--- Named Entity Recognition Results ---
+PERSONS: 'Satya Nadella'
+ORGANIZATIONS: 'Microsoft', 'OpenAI'
+LOCATIONS: 'San Francisco'
+
+--- Text Summary ---
+Microsoft CEO Satya Nadella announced a partnership with OpenAI at a San Francisco event, focusing on AI research and development.
+
+
+## 🛠️ Installation
+
+### Prerequisites
+- Python 3.8 or higher
+
+### Setup Instructions
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Auction-s/Search.git
+   cd Search
+   python -m venv venv
+# On Windows: venv\Scripts\activate
+# On Mac/Linux: source venv/bin/activate
+
+pip install -r requirements.txt
+python -m spacy download en_core_web_md
+python nlp_console.py
+
+📚 What I Learned
+Building this application provided hands-on experience with:
+Integrating multiple NLP libraries (spaCy + Hugging Face) in a single pipeline
+Processing user input and handling different text formats
+Working with transformer models for text generation tasks
+Structuring console applications for better user experience
+Managing model dependencies and deployment requirements
+
+🚀 Future Enhancements
+Add support for file input (process text documents)
+Implement batch processing for multiple texts
+Expand to support multiple languages
+Add sentiment analysis capability
+Create a web interface using Streamlit
+Optimize model loading for faster startup
+
